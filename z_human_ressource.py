@@ -74,7 +74,7 @@ class Demission(ModelSQL, ModelView):
     date_notification = fields.DateTime("Date de Notification", help="Date à laquelle la demande de démission a été générée.")
     date_depart = fields.DateTime("Date de Départ", help="Date à laquelle l'employé n'est plus admis en entreprise.")
     motif = fields.Char("Motif de Démission", help="Motif de démission.")
-    user_id = fields.Many2One('company.employee', "Employé", help="Utilisateur déposant la démission.")
+    user_id = fields.Many2One('company_employee', "Employé", help="Utilisateur déposant la démission.")
     validate = fields.Boolean("Validate", help="Validé si la demission est effective.")
 
 class Conges(ModelSQL, ModelView):
