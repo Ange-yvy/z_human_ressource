@@ -121,6 +121,7 @@ class Entretien(ModelSQL, ModelView):
     offre_id = fields.Many2One("compagny.offres", 'Offre', required=True)
 
 class Candidat(ModelSQL, ModelView):
+    "Candidat Class"
     __name__ = "res.user.candidat"
 
     user_id = fields.Many2One("party.party", "Candidat", help="Le candidat à une offre.")
@@ -133,6 +134,7 @@ class Candidat(ModelSQL, ModelView):
     autre = fields.Binary("Autre Documents", help="Le reste des documents en 1 fichier.")
 
 class EntretienCandidat(ModelSQL):
+    "Entretien-Classe"
     __name__ = 'recrutement.entretien-candidat'
 
     entretien = fields.Many2One('candidat.entretien', 'Entretien', required=True, ondelete='CASCADE')
