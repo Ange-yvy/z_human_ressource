@@ -74,7 +74,7 @@ class Demission(ModelSQL, ModelView):
     date_notification = fields.DateTime("Date de Notification", help="Date à laquelle la demande de démission a été générée.")
     date_depart = fields.DateTime("Date de Départ", help="Date à laquelle l'employé n'est plus admis en entreprise.")
     motif = fields.Char("Motif de Démission", help="Motif de démission.")
-    user_id = fields.Many2One('res.user-company.employee', "Employé", help="Utilisateur déposant la démission.")
+    user_id = fields.Many2One('company.employee', "Employé", help="Utilisateur déposant la démission.")
     validate = fields.Boolean("Validate", help="Validé si la demission est effective.")
 
 class Conges(ModelSQL, ModelView):
@@ -87,7 +87,7 @@ class Conges(ModelSQL, ModelView):
     fin = fields.DateTime("Date Fin", help="Date de Fin des congés.")
     validate_superviseur = fields.Boolean("Validé Par Le Superviseur", help="Vrai si le congé a été validé par le superviseur.")
     validate_HR = fields.Boolean("Validé Par La RH", help="Vrai si le congé a été validé par les RH.")
-    user_id = fields.Many2One("res.user-company.employee", "Employé", help="Employé demandant les Congés.")
+    user_id = fields.Many2One("company.employee", "Employé", help="Employé demandant les Congés.")
 
 class Absences(ModelSQL, ModelView):
     "User - Absences"
@@ -99,7 +99,7 @@ class Absences(ModelSQL, ModelView):
     fin = fields.DateTime("Date Fin", help="Date de Fin.")
     validate_superviseur = fields.Boolean("Validé Par Le Superviseur", help="Vrai si le congé a été validé par le superviseur.")
     validate_HR = fields.Boolean("Validé Par La RH", help="Vrai si le congé a été validé par les RH.")
-    user_id = fields.Many2One("res.user-company.employee", "Employé", help="Employé demandant les Congés.")
+    user_id = fields.Many2One("company.employee", "Employé", help="Employé demandant les Congés.")
 
 class Offres(ModelSQL, ModelView):
     "Compagnies Offres"
