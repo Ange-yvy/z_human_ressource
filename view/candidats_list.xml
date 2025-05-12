@@ -1,6 +1,6 @@
 <tree>
   <field name="user_id" />
-  <field name="date_candidature" />
+  <field name="date_candidature" widget='date' />
   <field name="entretiens" />
   <field name="offre_id" />
   <field name="cv" />
