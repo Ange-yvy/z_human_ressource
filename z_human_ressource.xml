@@ -102,7 +102,7 @@
             <field name="act_window" ref="act_offres_form"/>
         </record>
 
-        <record model="ir.action.act_window.view" id="act_absences_form_view2">
+        <record model="ir.action.act_window.view" id="act_offres_form_view2">
             <field name="sequence" eval="20"/>
             <field name="view" ref="offre_view_form"/>
             <field name="act_window" ref="act_offres_form"/>
