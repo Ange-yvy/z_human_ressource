@@ -91,28 +91,28 @@
             <field name="name">offres_list</field>
         </record>
 
-        <record model="ir.action.act_window" id="act_absences_form">
-         <field name="name">Absences</field>
-         <field name="res_model">res.user.absences</field>
+        <record model="ir.action.act_window" id="act_offres_form">
+         <field name="name">Offres</field>
+         <field name="res_model">compagny.offres</field>
         </record>
 
-        <record model="ir.action.act_window.view" id="act_absences_form_view1">
+        <record model="ir.action.act_window.view" id="act_offres_form_view1">
             <field name="sequence" eval="10"/>
-            <field name="view" ref="absences_view_list"/>
-            <field name="act_window" ref="act_absences_form"/>
+            <field name="view" ref="offre_view_list"/>
+            <field name="act_window" ref="act_offres_form"/>
         </record>
 
         <record model="ir.action.act_window.view" id="act_absences_form_view2">
             <field name="sequence" eval="20"/>
-            <field name="view" ref="absences_view_form"/>
-            <field name="act_window" ref="act_absences_form"/>
+            <field name="view" ref="offre_view_form"/>
+            <field name="act_window" ref="act_offres_form"/>
         </record>
 
         <menuitem
             parent="menu_HR"
-            action="act_absences_form"
+            action="act_offres_form"
             sequence="10"
-            id="menu_absences_form_tree"/>
+            id="menu_offres_form_tree"/>
 
    </data>
 </tryton>
