@@ -1,0 +1,6 @@
+<tree>
+    <field name="offre_id" />
+    <field name="date_entretien" />
+    <field name="note" />
+    <field name="candidats" />
+</tree>

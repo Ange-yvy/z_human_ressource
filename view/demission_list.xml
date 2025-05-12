@@ -1,0 +1,7 @@
+<tree>
+    <field name="user_id" />
+    <field name="date_notification" />
+    <field name="date_depart" />
+    <field name="motif" />
+    <field name="validate" />
+</tree>

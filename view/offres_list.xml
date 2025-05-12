@@ -1,0 +1,7 @@
+<tree>
+    <field name="titre" />
+    <field name="description" />
+    <field name="date_publication" />
+    <field name="date_fin" />
+    <field name="compagny" />
+</tree>

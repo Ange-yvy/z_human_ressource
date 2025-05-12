@@ -1,0 +1,12 @@
+<form>
+    <label name="date_notification" />
+    <field name="date_notification" />
+    <label name="date_depart" />
+    <field name="date_depart" />
+    <label name="motif" />
+    <field name="motif" />
+    <label name="user_id" />
+    <field name="user_id" />
+    <label name="validate" />
+    <field name="validate" />
+</form>

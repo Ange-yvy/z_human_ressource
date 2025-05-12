@@ -1,0 +1,118 @@
+<tryton>
+   <data>
+        <menuitem
+            name="Ressources Humaines"
+            sequence="20"
+            id="menu_HR"/>
+
+        <record model="ir.ui.view" id="candidat_view_form">
+            <field name="model">res.user.candidat</field>
+            <field name="type">form</field>
+            <field name="name">candidats_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="candidat_view_list">
+            <field name="model">res.user.candidat</field>
+            <field name="type">tree</field>
+            <field name="name">candidats_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_candidats_form">
+         <field name="name">Candidat</field>
+         <field name="res_model">res.user.candida</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_candidat_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="candidat_view_list"/>
+            <field name="act_window" ref="act_candidats_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_candidat_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="candidat_view_form"/>
+            <field name="act_window" ref="act_candidats_form"/>
+        </record>
+
+        <menuitem
+            parent="menu_HR"
+            action="act_candidats_form"
+            sequence="10"
+            id="menu_candidats_form_tree"/>
+        
+        <!-- ABSENCES  -->
+
+        <record model="ir.ui.view" id="absences_view_form">
+            <field name="model">res.user.absences</field>
+            <field name="type">form</field>
+            <field name="name">absences_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="absences_view_list">
+            <field name="model">res.user.absences</field>
+            <field name="type">tree</field>
+            <field name="name">absences_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_absences_form">
+         <field name="name">Absences</field>
+         <field name="res_model">res.user.absences</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_absences_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="absences_view_list"/>
+            <field name="act_window" ref="act_absences_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_absences_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="absences_view_form"/>
+            <field name="act_window" ref="act_absences_form"/>
+        </record>
+
+        <menuitem
+            parent="menu_HR"
+            action="act_absences_form"
+            sequence="10"
+            id="menu_absences_form_tree"/>
+        
+        <!-- OFFRES -->
+
+        <record model="ir.ui.view" id="offre_view_form">
+            <field name="model">compagny.offres</field>
+            <field name="type">form</field>
+            <field name="name">offres_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="offre_view_list">
+            <field name="model">compagny.offres</field>
+            <field name="type">tree</field>
+            <field name="name">offres_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_absences_form">
+         <field name="name">Absences</field>
+         <field name="res_model">res.user.absences</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_absences_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="absences_view_list"/>
+            <field name="act_window" ref="act_absences_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_absences_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="absences_view_form"/>
+            <field name="act_window" ref="act_absences_form"/>
+        </record>
+
+        <menuitem
+            parent="menu_HR"
+            action="act_absences_form"
+            sequence="10"
+            id="menu_absences_form_tree"/>
+
+   </data>
+</tryton>

@@ -1,0 +1,18 @@
+<form>
+  <label name="user_id" />
+  <field name="user_id" />
+  <label name="date_candidature" />
+  <field name="date_candidature" />
+  <label name="entretiens" />
+  <field name="entretiens" />
+  <label name="offre_id" />
+  <field name="offre_id" />
+  <label name="cv" />
+  <field name="cv" />
+  <label name="diplome" />
+  <field name="diplome" />
+  <label name="cni" />
+  <field name="cni" />
+  <label name="autre" />
+  <field name="autre" />
+</form>

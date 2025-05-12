@@ -1,0 +1,12 @@
+<form>
+    <label name="titre" />
+    <field name="titre" />
+    <label name="description" />
+    <field name="description" />
+    <label name="date_publication" />
+    <field name="date_publication" />
+    <label name="date_fin" />
+    <field name="date_fin" />
+    <label name="compagny" />
+    <field name="compagny" />
+</form>

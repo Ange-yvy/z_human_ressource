@@ -1,0 +1,16 @@
+<form>
+    <label name="user_id" />
+    <field name="user_id" />
+    <label name="date_demande" />
+    <field name="date_demande" />
+    <label name="motif" />
+    <field name="motif" />
+    <label name="debut" />
+    <field name="debut" />
+    <label name="fin" />
+    <field name="fin" />
+    <label name="validate_superviseur" />
+    <field name="validate_superviseur" />
+    <label name="validate_HR" />
+    <field name="validate_HR" />
+</form>
