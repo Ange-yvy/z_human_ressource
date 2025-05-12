@@ -1,8 +1,8 @@
 <tree>
     <field name="user_id" />
-    <field name="date_demande" />
-    <field name="debut" />
-    <field name="fin" />
+    <field name="date_demande" widget='date'/>
+    <field name="debut" widget='date'/>
+    <field name="fin" widget='date' />
     <field name="motif" />
     <field name="validate_superviseur" />
     <field name="validate_HR" />
