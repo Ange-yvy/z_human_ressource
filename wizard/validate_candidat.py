@@ -62,7 +62,7 @@ class ValidateCandidat(Wizard):
                 employee_data['party'] = candidat.user_id
                 employee_data['supervisor'] = self.start.supervisor
                 employee_data['company'] =  Transaction().context.get('company')
-                employee_data['start_date'] = datetime.date()
+                employee_data['start_date'] = date.today()
 
             list_candidats.append(employee_data)
         
