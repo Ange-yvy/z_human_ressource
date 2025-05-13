@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<form>
+    <separator string="DO You Want to validate this Candidat?.
+                        This action is IRREVERSIBLE.
+                        "
+        colspan="4" id="test_ask_validate_candidat"/>
+    <newline/>
+    <separator string="Validate Candidat(s)" colspan="6"
+        id="ask_test_validate_candidat"/>
+        
+    <label name="supervisor" />
+    <field name="supervisor" />
+</form>

@@ -148,7 +148,6 @@ class Stagiaires(ModelSQL, ModelView):
     date_debut = fields.Date("Date de Début", help="Date de Début du Stage")
     date_fin = fields.Date("Date de Fin", help="Date de fin de Stage.")
     type_stagiaire = fields.Char('Type du Stage', help="Type du Stage")
-
     
 class Ressource_Humaine(ModelSQL,ModelView):
         "Class Ressource_Humaine"

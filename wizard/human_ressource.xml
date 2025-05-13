@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="validate_candidat_init">
+            <field name="model">validate.candidat.init</field>
+            <field name="type">form</field>
+            <field name="name">ask_validate_candidat</field>
+        </record>
+        <record model="ir.action.wizard" id="act_Validate_Candidat">
+            <field name="name">Generate Examen Validation</field>
+            <field name="wiz_name">results.examen.create</field>
+            <field name="model">all_syntheses</field>
+        </record>
+        <record model="ir.action.keyword" id="act_generate_results_validation_examen_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">all_syntheses,-1</field>
+            <field name="action" ref="act_generate_results_validation_examen"/>
+        </record>
+    </data>
+</tryton>
+
+
+
