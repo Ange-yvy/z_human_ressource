@@ -3,6 +3,7 @@
 
 from trytond.pool import Pool
 from . import z_human_ressource
+from .wizard import validate_candidat
 
 __all__ = ['register']
 
@@ -16,8 +17,10 @@ def register():
         z_human_ressource.EntretienCandidat,
         z_human_ressource.Offres,
         z_human_ressource.Absences,
+        validate_candidat.ValidateCandidatInit,
         module='z_human_ressource', type_='model')
     Pool.register(
+        validate_candidat.ValidateCandidat,
         module='z_human_ressource', type_='wizard')
     Pool.register(
         module='z_human_ressource', type_='report')
