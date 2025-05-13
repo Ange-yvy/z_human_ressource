@@ -7,14 +7,14 @@
             <field name="name">ask_validate_candidat</field>
         </record>
         <record model="ir.action.wizard" id="act_Validate_Candidat">
-            <field name="name">Generate Examen Validation</field>
-            <field name="wiz_name">results.examen.create</field>
-            <field name="model">all_syntheses</field>
+            <field name="name">Validate Candidates</field>
+            <field name="wiz_name">validate.candidat</field>
+            <field name="model">res.user.candidat</field>
         </record>
-        <record model="ir.action.keyword" id="act_generate_results_validation_examen_keyword">
+        <record model="ir.action.keyword" id="act_validate_candidat_keyword">
             <field name="keyword">form_action</field>
-            <field name="model">all_syntheses,-1</field>
-            <field name="action" ref="act_generate_results_validation_examen"/>
+            <field name="model">res.user.candidat,-1</field>
+            <field name="action" ref="act_Validate_Candidat"/>
         </record>
     </data>
 </tryton>
