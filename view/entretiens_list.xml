@@ -1,5 +1,4 @@
 <tree>
-    <field name="offre_id" />
     <field name="date_entretien" widget="date"/>
     <field name="note" />
     <field name="candidats" />
