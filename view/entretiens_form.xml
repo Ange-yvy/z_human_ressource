@@ -1,6 +1,4 @@
 <form>
-    <label name="offre_id" />
-    <field name="offre_id" />
     <label name="date_entretien" />
     <field name="date_entretien" />
     <label name="note" />
