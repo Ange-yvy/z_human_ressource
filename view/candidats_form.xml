@@ -3,8 +3,6 @@
   <field name="user_id" />
   <label name="date_candidature" />
   <field name="date_candidature" />
-  <label name="entretiens" />
-  <field name="entretiens" />
   <label name="offre_id" />
   <field name="offre_id" />
   <label name="cv" />

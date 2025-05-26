@@ -114,5 +114,119 @@
             sequence="10"
             id="menu_offres_form_tree"/>
 
+
+        <!-- ENTRETIENS -->
+
+        <record model="ir.ui.view" id="entretiens_view_form">
+            <field name="model">candidat.entretien</field>
+            <field name="type">form</field>
+            <field name="name">entretiens_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="entretiens_view_list">
+            <field name="model">candidat.entretien</field>
+            <field name="type">tree</field>
+            <field name="name">entretiens_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_entretiens_form">
+         <field name="name">Entretiens</field>
+         <field name="res_model">candidat.entretien</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_entretiens_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="entretiens_view_list"/>
+            <field name="act_window" ref="act_entretiens_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_entretiens_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="entretiens_view_form"/>
+            <field name="act_window" ref="act_entretiens_form"/>
+        </record>
+
+        <menuitem
+            parent="menu_HR"
+            action="act_entretiens_form"
+            sequence="10"
+            id="menu_entretiens_form_tree"/>
+
+
+        <!-- CONGÉS -->
+
+        <record model="ir.ui.view" id="conges_view_form">
+            <field name="model">res.user.conges</field>
+            <field name="type">form</field>
+            <field name="name">conges_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="conges_view_list">
+            <field name="model">res.user.conges</field>
+            <field name="type">tree</field>
+            <field name="name">conges_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_conges_form">
+         <field name="name">Congés</field>
+         <field name="res_model">res.user.conges</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_conges_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="conges_view_list"/>
+            <field name="act_window" ref="act_conges_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_conges_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="conges_view_form"/>
+            <field name="act_window" ref="act_conges_form"/>
+        </record>
+
+        <menuitem
+            parent="menu_HR"
+            action="act_conges_form"
+            sequence="10"
+            id="menu_conges_form_tree"/>
+
+
+        <!-- DEMISSION -->
+
+        <record model="ir.ui.view" id="demission_view_form">
+            <field name="model">res.user.demission</field>
+            <field name="type">form</field>
+            <field name="name">demission_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="demission_view_list">
+            <field name="model">res.user.demission</field>
+            <field name="type">tree</field>
+            <field name="name">demission_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_demission_form">
+         <field name="name">Démission</field>
+         <field name="res_model">res.user.demission</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_demission_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="demission_view_list"/>
+            <field name="act_window" ref="act_demission_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_demission_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="demission_view_form"/>
+            <field name="act_window" ref="act_demission_form"/>
+        </record>
+
+        <menuitem
+            parent="menu_HR"
+            action="act_demission_form"
+            sequence="10"
+            id="menu_demission_form_tree"/>
+
    </data>
 </tryton>

@@ -99,7 +99,7 @@ class Absences(ModelSQL, ModelView):
     fin = fields.DateTime("Date Fin", help="Date de Fin.")
     validate_superviseur = fields.Boolean("Validé Par Le Superviseur", help="Vrai si le congé a été validé par le superviseur.")
     validate_HR = fields.Boolean("Validé Par La RH", help="Vrai si le congé a été validé par les RH.")
-    user_id = fields.Many2One("company.employee", "Employé", help="Employé demandant les Congés.")
+    user_id2 = fields.Many2One("company.employee", "Employé", help="Employé demandant les Congés.")
 
 class Offres(ModelSQL, ModelView):
     "Compagnies Offres"
