@@ -1,7 +1,7 @@
 <tree>
     <field name="user_id" />
-    <field name="date_notification" />
-    <field name="date_depart" />
+    <field name="date_notification" widget="date"/>
+    <field name="date_depart" widget="date"/>
     <field name="motif" />
     <field name="validate" />
 </tree>

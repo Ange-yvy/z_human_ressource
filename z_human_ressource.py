@@ -71,32 +71,32 @@ class Demission(ModelSQL, ModelView):
     'User Demissions'
     __name__ = "res.user.demission"
 
-    date_notification = fields.DateTime("Date de Notification", help="Date à laquelle la demande de démission a été générée.")
-    date_depart = fields.DateTime("Date de Départ", help="Date à laquelle l'employé n'est plus admis en entreprise.")
+    date_notification = fields.DateTime("Date de Notification", help="Date à laquelle la demande de démission a été générée.", required=True)
+    date_depart = fields.DateTime("Date de Départ", help="Date à laquelle l'employé n'est plus admis en entreprise.", required=True)
     motif = fields.Char("Motif de Démission", help="Motif de démission.")
-    user_id = fields.Many2One('company.employee', "Employé", help="Utilisateur déposant la démission.")
+    user_id = fields.Many2One('company.employee', "Employé", help="Utilisateur déposant la démission.", required=True)
     validate = fields.Boolean("Validate", help="Validé si la demission est effective.")
 
 class Conges(ModelSQL, ModelView):
     'User - Conges'
     __name__ = "res.user.conges"
 
-    date_demande = fields.DateTime("Date", help="Date de la demande en congé.")
-    motif = fields.Char("Motif", help="Motif de la demande de congés.")
-    debut = fields.DateTime("Date Début", help="Date de début des congés")
-    fin = fields.DateTime("Date Fin", help="Date de Fin des congés.")
+    date_demande = fields.DateTime("Date", help="Date de la demande en congé.", required=True)
+    motif = fields.Char("Motif", help="Motif de la demande de congés.", required=True)
+    debut = fields.DateTime("Date Début", help="Date de début des congés", required=True)
+    fin = fields.DateTime("Date Fin", help="Date de Fin des congés.", required=True)
     validate_superviseur = fields.Boolean("Validé Par Le Superviseur", help="Vrai si le congé a été validé par le superviseur.")
     validate_HR = fields.Boolean("Validé Par La RH", help="Vrai si le congé a été validé par les RH.")
-    user_id = fields.Many2One("company.employee", "Employé", help="Employé demandant les Congés.")
+    user_id = fields.Many2One("company.employee", "Employé", help="Employé demandant les Congés.", required=True)
 
 class Absences(ModelSQL, ModelView):
     "User - Absences"
     __name__ = "res.user.absences"
 
-    date_demande = fields.DateTime("Date", help="Date de la demande des absences.")
-    motif = fields.Char("Motif", help="Motif de la demande d'absence.")
-    debut = fields.DateTime("Date Début", help="Date de début.")
-    fin = fields.DateTime("Date Fin", help="Date de Fin.")
+    date_demande = fields.DateTime("Date", help="Date de la demande des absences.", required=True)
+    motif = fields.Char("Motif", help="Motif de la demande d'absence.", required=True)
+    debut = fields.DateTime("Date Début", help="Date de début.", required=True)
+    fin = fields.DateTime("Date Fin", help="Date de Fin.", required=True)
     validate_superviseur = fields.Boolean("Validé Par Le Superviseur", help="Vrai si le congé a été validé par le superviseur.")
     validate_HR = fields.Boolean("Validé Par La RH", help="Vrai si le congé a été validé par les RH.")
     user_id2 = fields.Many2One("company.employee", "Employé", help="Employé demandant les Congés.")
@@ -118,16 +118,15 @@ class Entretien(ModelSQL, ModelView):
     date_entretien = fields.DateTime("Date de l'enntretien", help="Date de l'entretien.")
     note = fields.Char("Remarques-Description", help="Une Note, Une remarque ou description Concerant l'entretien")
     candidats = fields.Many2Many('recrutement.entretien-candidat', 'entretien', 'candidat', 'Candidats')
-    offre_id = fields.Many2One("compagny.offres", 'Offre', required=True)
 
 class Candidat(ModelSQL, ModelView):
     "Candidat Class"
     __name__ = "res.user.candidat"
 
-    user_id = fields.Many2One("party.party", "Candidat", help="Le candidat à une offre.")
-    date_candidature = fields.DateTime("Date de Candidature", help='Date de Candidature')
+    user_id = fields.Many2One("party.party", "Candidat", help="Le candidat à une offre.", required=True)
+    date_candidature = fields.DateTime("Date de Candidature", help='Date de Candidature', required=True)
     entretiens = fields.Many2Many('recrutement.entretien-candidat', 'candidat', 'entretien', 'Entretiens')
-    offre_id = fields.Many2One("compagny.offres", "Offre", help="L'Offre.")
+    offre_id = fields.Many2One("compagny.offres", "Offre", help="L'Offre.", required=True)
     cv = fields.Binary("Curriculum Vitae", help="Le CV de l'employé ou du candidat.")
     diplome = fields.Binary("Diplôme", help="Le diplome le plus élevé.")
     cni = fields.Binary("CNI", help="Carte Nationale d'Identité.")
@@ -144,7 +143,7 @@ class Stagiaires(ModelSQL, ModelView):
     "Class Stagiaire"
     __name__ ="res.user.stagiaire"
 
-    user_id = fields.Many2One('party.party', "Personne", help='La personne Candidat')
+    user_id = fields.Many2One('party.party', "Personne", help='La personne Candidat', required=True)
     date_debut = fields.Date("Date de Début", help="Date de Début du Stage")
     date_fin = fields.Date("Date de Fin", help="Date de fin de Stage.")
     type_stagiaire = fields.Char('Type du Stage', help="Type du Stage")
