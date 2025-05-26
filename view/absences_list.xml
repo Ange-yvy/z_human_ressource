@@ -1,5 +1,5 @@
 <tree>
-    <field name="user_id" />
+    <field name="user_id2" />
     <field name="date_demande" widget='date'/>
     <field name="debut" widget='date'/>
     <field name="fin" widget='date' />

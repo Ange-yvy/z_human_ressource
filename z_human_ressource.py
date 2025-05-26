@@ -27,8 +27,6 @@ from decimal import Decimal
 from collections import defaultdict, namedtuple
 from itertools import combinations
 from datetime import datetime, date
-
-from num2words import num2words
 from sql import Null
 from sql.aggregate import Sum
 from sql.conditionals import Coalesce, Case
